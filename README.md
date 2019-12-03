@@ -1,6 +1,6 @@
 # Reverse an Array
 <!-- Short summary or background information -->
-Completed by Mike Grace
+First of many code challenges in career track. Completed by Mike Grace
 
 ## Challenge
 <!-- Description of the challenge -->
