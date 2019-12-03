@@ -19,6 +19,7 @@ For this challenge I decided to do the following:
 
 ## Solution
 <!-- Embedded whiteboard image -->
+~~~~
 const reverseArray = arr => {
     let newArr = [];
     let newArrIndex = 0;
@@ -28,3 +29,4 @@ const reverseArray = arr => {
     }
     return newArr;
 };
+~~~~
