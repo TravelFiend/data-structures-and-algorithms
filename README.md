@@ -30,3 +30,7 @@ const reverseArray = arr => {
     return newArr;
 };
 ~~~~
+
+## Table of Contents
+
+1. arrayReverse PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/1

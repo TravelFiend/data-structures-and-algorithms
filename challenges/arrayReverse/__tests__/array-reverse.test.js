@@ -1,4 +1,4 @@
-const arrayReverse = require('../challenges/arrayReverse/array-reverse');
+const arrayReverse = require('../array-reverse');
 
 describe('code challenges', () => {
     describe('array reverse', () => {
