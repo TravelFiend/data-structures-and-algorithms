@@ -1,3 +1,10 @@
+## Table of Contents
+
+1. arrayReverse - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/1
+1. arrayShift - PR: 
+
+
+
 # Reverse an Array
 <!-- Short summary or background information -->
 First of many code challenges in career track. Completed by Mike Grace
@@ -31,6 +38,25 @@ const reverseArray = arr => {
 };
 ~~~~
 
-## Table of Contents
 
-1. arrayReverse PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/1
+
+# Shift an Array
+<!-- Short summary or background information -->
+Second code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Splice a value into the middle of an array without using any of Javascript's built in methods
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I went with the following approach:
+
+1. 
+
+
+## Solution
+<!-- Embedded whiteboard image -->
+~~~~
+
+~~~~
