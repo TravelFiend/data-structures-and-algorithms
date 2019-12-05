@@ -110,5 +110,12 @@ For this challenge I decided to do the following:
 <!-- Embedded whiteboard image -->
 ![array-binary-search](./assets/array-binary-search.jpg)
 ~~~~
-
+const binarySearch = (sortedArr, searchKey) => {
+    for(let i = 0; i < sortedArr.length; i++) {
+        if(sortedArr[i] === searchKey) {
+            return i;
+        }
+    }
+    return -1;
+};
 ~~~~
