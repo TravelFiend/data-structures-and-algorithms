@@ -1,8 +1,7 @@
 ## Table of Contents
 
 1. arrayReverse - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/1
-1. arrayShift - PR: 
-
+1. arrayShift - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/2
 
 
 # Reverse an Array
@@ -65,7 +64,8 @@ For this challenge I went with the following approach:
 
 ## Solution
 <!-- Embedded whiteboard image -->
-[logo]: ./array-shift-whiteboard.jpg
+[logo]: ./assets/array-shift-whiteboard.jpg
+![logo]
 ~~~~
 const insertShiftArray = (arr, num) => {
     const newArr = [];
