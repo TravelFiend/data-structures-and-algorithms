@@ -15,4 +15,15 @@ class LinkedList {
         node.next = this.head;
         this.head = node;
     }
+
+    includes(val) {
+        let current = this.head;
+        while(current !== null) {
+            if(current.value === val) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
 }
