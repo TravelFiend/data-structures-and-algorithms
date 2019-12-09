@@ -37,3 +37,5 @@ class LinkedList {
         return str;
     }
 }
+
+module.exports = LinkedList;
