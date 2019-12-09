@@ -1,6 +1,6 @@
 const arrayReverse = require('../array-reverse');
 
-describe('array reverse', () => {
+describe('arrayReverse', () => {
     it('should reverse any given array', () => {
         expect(arrayReverse([1, 2, 3, 4])).toEqual([4, 3, 2, 1]);
         expect(arrayReverse(['a', 's', 'd', 'f', 'g'])).toEqual(['g', 'f', 'd', 's', 'a']);

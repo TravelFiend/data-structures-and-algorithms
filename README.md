@@ -22,7 +22,6 @@ For this challenge I decided to do the following:
 4. set the index (chosen by our set variable) of our empty array to be equal to the value of the argument array at current iteration
 5. return our new array
 
-
 ## Solution
 <!-- Embedded whiteboard image -->
 ~~~~
@@ -85,5 +84,38 @@ const insertShiftArray = (arr, num) => {
     }
 
     return newArr;
+};
+~~~~
+
+
+
+# Array Binary Search
+<!-- Short summary or background information -->
+Third code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Return the index of the array’s element that is equal to the search key, or -1 if the element does not exist
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. Loop through the array
+1. Check if the value at each index equals the search key
+1. If so, return the index where it was found
+1. If not, return -1
+
+## Solution
+<!-- Embedded whiteboard image -->
+![array-binary-search](./assets/array-binary-search.jpg)
+~~~~
+const binarySearch = (sortedArr, searchKey) => {
+    for(let i = 0; i < sortedArr.length; i++) {
+        if(sortedArr[i] === searchKey) {
+            return i;
+        }
+    }
+    return -1;
 };
 ~~~~
