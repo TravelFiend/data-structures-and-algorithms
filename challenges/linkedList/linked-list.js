@@ -9,4 +9,10 @@ class LinkedList {
     constructor() {
         this.head = null;
     }
+
+    insert(val) {
+        const node = new Node(val);
+        node.next = this.head;
+        this.head = node;
+    }
 }
