@@ -26,4 +26,14 @@ class LinkedList {
         }
         return false;
     }
+
+    toString() {
+        let str = '';
+        let current = this.head;
+        while(current !== null) {
+            str += `${current.value} `;
+            current = current.next;
+        }
+        return str;
+    }
 }
