@@ -2,6 +2,10 @@
 
 1. arrayReverse - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/1
 1. arrayShift - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/2
+1. arrayBinarySearch - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/3
+1. mockInterview - N/A
+1. linkedList - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/5
+1. llInsertions - PR: 
 
 
 # Reverse an Array
@@ -118,4 +122,128 @@ const binarySearch = (sortedArr, searchKey) => {
     }
     return -1;
 };
+~~~~
+
+# Mock Interview
+<!-- Short summary or background information -->
+Fourth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write a function to add up the sum of each row in a matrix of arbitrary size, and return an array with the appropriate values.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. Create an empty array
+1. Loop through outer array
+1. Create counter variable and set it to zero index of inner array
+1. Loop through inner arrays (starting and index 1)
+1. For each inner array, add each element to counter
+1. Set index of outer array to new counter value
+1. Return new arr
+
+## Solution
+<!-- Embedded whiteboard image -->
+![mock-interview](./assets/mock-interview-whiteboard.jpg)
+~~~~
+const arrayCondenser = arr => {
+    const newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        let counter = arr[i][0];
+        for(let j = 1; j < arr[i].length; j++) {
+            counter += arr[i][j];
+        }
+        newArr[i] = counter;
+    }
+    return newArr;
+};
+~~~~
+
+# Linked List
+<!-- Short summary or background information -->
+Fifth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
+* Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+* Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+* Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+![mock-interview](./assets/mock-interview-whiteboard.jpg)
+~~~~
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    constructor() {
+        this.head = null;
+    }
+
+    insert(val) {
+        const node = new Node(val);
+        node.next = this.head;
+        this.head = node;
+    }
+
+    includes(val) {
+        let current = this.head;
+        while(current !== null) {
+            if(current.value === val) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    toString() {
+        let str = '';
+        let current = this.head;
+        while(current !== null) {
+            str += `${current.value} `;
+            current = current.next;
+        }
+        return str;
+    }
+}
+~~~~
+
+# Linked List Insertions
+<!-- Short summary or background information -->
+Sixth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write the following methods for the Linked List class:
+
+* .append(value) which adds a new node with the given value to the end of the list
+* .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+* .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+~~~~
+
 ~~~~
