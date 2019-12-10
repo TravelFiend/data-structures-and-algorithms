@@ -2,6 +2,8 @@
 
 1. arrayReverse - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/1
 1. arrayShift - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/2
+1. arrayBinarySearch - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/3
+1. mockInterview - N/A
 
 
 # Reverse an Array
@@ -117,5 +119,42 @@ const binarySearch = (sortedArr, searchKey) => {
         }
     }
     return -1;
+};
+~~~~
+
+# Array Binary Search
+<!-- Short summary or background information -->
+Fourth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write a function to add up the sum of each row in a matrix of arbitrary size, and return an array with the appropriate values.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. Create an empty array
+1. Loop through outer array
+1. Create counter variable and set it to zero index of inner array
+1. Loop through inner arrays (starting and index 1)
+1. For each inner array, add each element to counter
+1. Set index of outer array to new counter value
+1. Return new arr
+
+## Solution
+<!-- Embedded whiteboard image -->
+![mock-interview](./assets/mock-interview-whiteboard.jpg)
+~~~~
+const arrayCondenser = arr => {
+    const newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        let counter = arr[i][0];
+        for(let j = 1; j < arr[i].length; j++) {
+            counter += arr[i][j];
+        }
+        newArr[i] = counter;
+    }
+    return newArr;
 };
 ~~~~
