@@ -39,19 +39,22 @@ class LinkedList {
     append(val) {
         let current = this.head;
         const node = new Node(val);
-        while(current){
-            if(current.next)
+        while(current.next){
             current = current.next;
         }
-
+        current.next = node;
     }
 
     insertBefore(val, newVal){
-
-    }
-
-    insertAfter(val, newVal){
-
+        let current = this.head;
+        const node = new Node(newVal);
+        while(current){
+            if(current.next.value === val){
+                node.next = current.next;
+                current.next = node;
+            }
+            current = current.next;
+        }
     }
 }
 
