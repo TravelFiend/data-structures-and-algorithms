@@ -247,3 +247,23 @@ For this challenge I decided to do the following:
 ~~~~
 
 ~~~~
+
+# Linked List Kth From End
+<!-- Short summary or background information -->
+Seventh code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+~~~~
+
+~~~~
