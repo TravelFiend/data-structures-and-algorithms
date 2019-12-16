@@ -6,6 +6,7 @@
 1. mockInterview - N/A
 1. linkedList - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/5
 1. llInsertions - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/6
+1. llKthFromEnd - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/8
 
 
 # Reverse an Array
@@ -254,16 +255,38 @@ Seventh code chalenge in career track. Completed by Mike Grace
 
 ## Challenge
 <!-- Description of the challenge -->
-Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 For this challenge I decided to do the following:
 
-1. 
+1. find full length of linked list
+1. subtract k from full length
+1. after getting the difference, find corresponding linked list node
+1. return that node's value
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![ll-kth-from-end](./assets/ll-kth-from-end.jpg)
 ~~~~
-
+kthFromEnd(k) {
+    let current = this.head;
+    let totalNodes = 0;
+    while(current){
+        totalNodes++;
+        current = current.next;
+    }
+    const place = totalNodes - k;
+    let num = 1;
+    current = this.head;
+    while(current){
+        if(num !== place){
+            num++;
+            current = current.next;
+        } else {
+            return current.value;
+        }
+    }
+}
 ~~~~

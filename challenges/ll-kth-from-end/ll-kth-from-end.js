@@ -76,6 +76,17 @@ class LinkedList {
             totalNodes++;
             current = current.next;
         }
+        const place = totalNodes - k;
+        let num = 1;
+        current = this.head;
+        while(current){
+            if(num !== place){
+                num++;
+                current = current.next;
+            } else {
+                return current.value;
+            }
+        }
     }
 }
 
