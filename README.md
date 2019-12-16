@@ -6,6 +6,7 @@
 1. mockInterview - N/A
 1. linkedList - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/5
 1. llInsertions - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/6
+1. llKthFromEnd - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/8
 
 
 # Reverse an Array
