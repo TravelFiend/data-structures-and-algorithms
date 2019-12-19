@@ -246,7 +246,38 @@ For this challenge I decided to do the following:
 ## Solution
 <!-- Embedded whiteboard image -->
 ~~~~
+append(val) {
+    let current = this.head;
+    const node = new Node(val);
+    while(current.next){
+        current = current.next;
+    }
+    current.next = node;
+}
 
+insertBefore(val, newVal){
+    let current = this.head;
+    const node = new Node(newVal);
+    while(current){
+        if(current.next.value === val){
+            node.next = current.next;
+            current.next = node;
+        }
+        current = current.next;
+    }
+}
+
+insertAfter(val, newVal){
+    let current = this.head;
+    const node = new Node(newVal);
+    while(current) {
+        if(current.value === val) {
+            node.next = current.next;
+            current.next = node;
+        }
+        current = current.next;
+    }
+}
 ~~~~
 
 # Linked List Kth From End
@@ -289,4 +320,25 @@ kthFromEnd(k) {
         }
     }
 }
+~~~~
+
+# Linked List merge
+<!-- Short summary or background information -->
+Eigth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+![ll-merge](./assets/ll-merge.jpg)
+~~~~
+
 ~~~~
