@@ -7,6 +7,7 @@
 1. linkedList - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/5
 1. llInsertions - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/6
 1. llKthFromEnd - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/8
+1. queueWithStacks - PR: 
 
 
 # Reverse an Array
@@ -339,6 +340,32 @@ For this challenge I decided to do the following:
 ## Solution
 <!-- Embedded whiteboard image -->
 ![ll-merge](./assets/ll-merge.jpg)
+~~~~
+
+~~~~
+
+# Queue With Stacks
+<!-- Short summary or background information -->
+CLass eleven code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
+
+* enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
+* dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+![queue-with-stacks](./assets/queue-with-stacks.jpg)
 ~~~~
 
 ~~~~
