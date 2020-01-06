@@ -361,7 +361,15 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 For this challenge I decided to do the following:
 
-1. 
+1. make PseudoQueue class with 2 stacks
+1. push all new nodes on to first stack
+1. to remove from front we must:
+    * pop off stack one's top and push onto stack 2
+    * repeat until stack one is empty
+    * save stack 2 top value
+    * pop stack 2 top off
+    * pop off stack two's top and push back on to stack 1
+1. return earlier saved stack 2 top
 
 ## Solution
 <!-- Embedded whiteboard image -->

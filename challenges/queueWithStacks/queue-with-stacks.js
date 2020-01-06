@@ -7,30 +7,30 @@ class Node {
 
 class Stack {
     constructor() {
-        this.head = null;
+        this.top = null;
     }
 
-    push(val) {
-        let current = this.head;
-        this.head = new Node(val);
-        this.head.next = current;
+    push(value) {
+        const node = new Node(value, this.top);
+        this.top = node;
     }
 
     pop() {
-        const toReturn = this.head.value;
-        this.head = this.head.next;
-        return toReturn;
+        if(!this.top) return null;
+
+        const top = this.top;
+        this.top = top.next;
+        return top;
     }
 
     peek() {
-        if(this.head) {
-            return this.head.value;
-        }
+        if(!this.top) return null;
+        return this.top.value;
     }
 }
 
 class PseudoQueue {
-    constructor(){
+    constructor() {
         this.stackOne = new Stack();
         this.stackTwo = new Stack();
     }
