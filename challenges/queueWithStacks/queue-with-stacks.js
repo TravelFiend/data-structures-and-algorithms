@@ -1,7 +1,7 @@
 class Node {
-    constructor(val) {
-        this.value = val;
-        this.next = null;
+    constructor(value, next = null) {
+        this.value = value;
+        this.next = next;
     }
 }
 
@@ -28,3 +28,12 @@ class Stack {
         }
     }
 }
+
+class PseudoQueue {
+    constructor(){
+        this.stackOne = new Stack();
+        this.stackTwo = new Stack();
+    }
+}
+
+module.exports = PseudoQueue;
