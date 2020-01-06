@@ -34,6 +34,23 @@ class PseudoQueue {
         this.stackOne = new Stack();
         this.stackTwo = new Stack();
     }
+
+    enqueue(value) {
+        this.stackOne.push(value);
+    }
+
+    dequeue() {
+        if(!this.stackOne.top) return 'empty queue!';
+        while(this.stackOne.top) {
+            this.stackTwo.push(this.stackOne.pop().value);
+        }
+        const temp = this.stackTwo.peek();
+        this.stackTwo.pop();
+        while(this.stackTwo.top) {
+            this.stackOne.push(this.stackTwo.pop().value);
+        }
+        return temp;
+    }
 }
 
 module.exports = PseudoQueue;
