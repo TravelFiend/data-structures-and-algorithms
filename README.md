@@ -410,3 +410,33 @@ class AnimalShelter {
     }
 }
 ~~~~
+
+# Linked List merge
+<!-- Short summary or background information -->
+Thirteenth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+* Round Brackets : ()
+* Square Brackets : []
+* Curly Brackets : {}
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. turn input string into array with only bracket characters
+1. define regex for both opening and closing brackets
+1. loop through array and unshift opening brackets into new array
+1. when we come across a closing bracket, compare it to the zero index of the array we've been unshifting into
+1. if they are a pair, shift the last unshifted item back out of the array
+1. else invalid is true and we give an error message
+
+## Solution
+<!-- Embedded whiteboard image -->
+![multiBracketValidation-whiteboard](./assets/multiBracketValidation-whiteboard.jpg)
+~~~~
+
+~~~~
