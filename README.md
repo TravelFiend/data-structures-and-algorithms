@@ -7,7 +7,7 @@
 1. linkedList - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/5
 1. llInsertions - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/6
 1. llKthFromEnd - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/8
-1. queueWithStacks - PR: 
+1. queueWithStacks - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/11
 
 
 # Reverse an Array
