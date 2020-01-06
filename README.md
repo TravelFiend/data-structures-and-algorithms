@@ -7,6 +7,9 @@
 1. linkedList - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/5
 1. llInsertions - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/6
 1. llKthFromEnd - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/8
+1. llMerge - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/7
+1. fifoAnimalShelter - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/9
+1. multiBracketValidation - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/10
 
 
 # Reverse an Array
@@ -340,7 +343,33 @@ For this challenge I decided to do the following:
 <!-- Embedded whiteboard image -->
 ![ll-merge](./assets/ll-merge.jpg)
 ~~~~
+const { LinkedList } = require('../linkedList/linked-list');
 
+const mergeLists = (ll1, ll2) => {
+    let ll3 = new LinkedList();
+    let current1 = ll1.head;
+    let current2 = ll2.head;
+
+    ll3.head = current1;
+    let current3 = ll3.head;
+
+    while(current2){
+        current3.next = current2;
+        current3 = current2;
+        current2 = current2.next;
+        if(current1){
+            current3.next = current1;
+            current3 = current1;
+            current1 = current1.next;
+        }
+    }
+    
+    while(current1){
+        current3.next = current1;
+        current3 = current1;
+        current1 = current1.next;
+    }
+};
 ~~~~
 
 # FIFO Animal Shelter
