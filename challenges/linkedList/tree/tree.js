@@ -1,5 +1,5 @@
 class Node {
-    constructor(data, left=null, right=null) {
+    constructor(data, left = null, right = null) {
         this.data = data;
         this.left = left;
         this.right = right;
@@ -29,21 +29,33 @@ class BinarySearchTree {
             if(data < currentNode.data){
                 if(!currentNode.left){
                     currentNode.left = newNode;
-                    break;
+                    currentNode = newNode.left;
                 } else {
                     currentNode = currentNode.left;
                 }
-            } else if(data > currentNode.data) {
-                if (!currentNode.right) {
+            } else {
+                if(!currentNode.right) {
                     currentNode.right = newNode;
-                    break;
+                    currentNode = newNode.right;
                 } else {
                     currentNode = currentNode.right;
                 }
-            } else {
-                break;
             }
-        })
+        }
+    }
 
+    contains(data) {
+        let currentNode = this.root;
+        
+        while(currentNode){
+            if(data === currentNode.data) {
+                return true;
+            } else if(data < currentNode.data){
+                currentNode = currentNode.left;
+            } else {
+                currentNode = currentNode.right;
+            }
+        }
+        return false;
     }
 }
