@@ -11,7 +11,7 @@ export class BinarySearchTree {
         this.root = null;
     }
 
-    add(data){u;
+    add(data){
         const newNode = new Node(data);
         let currentNode;
 
