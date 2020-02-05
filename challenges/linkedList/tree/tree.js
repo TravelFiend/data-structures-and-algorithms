@@ -6,16 +6,12 @@ class Node {
     }
 }
 
-class BinaryTree {
-    
-}
-
-class BinarySearchTree {
+export class BinarySearchTree {
     constructor() {
         this.root = null;
     }
 
-    add(data){
+    add(data){u;
         const newNode = new Node(data);
         let currentNode;
 
@@ -46,7 +42,7 @@ class BinarySearchTree {
 
     contains(data) {
         let currentNode = this.root;
-        
+
         while(currentNode){
             if(data === currentNode.data) {
                 return true;
@@ -57,5 +53,46 @@ class BinarySearchTree {
             }
         }
         return false;
+    }
+
+    pre(root) {
+        const arr = [];
+        if(root) {
+            arr.push(root.data);
+            this.pre(root.left);
+            this.pre(root.right);
+        }
+        return arr;
+    }
+
+    post(root) {
+        const arr = [];
+        if(root) {
+            arr.push(root.data);
+            this.post(root.left);
+            this.post(root.right);
+        }
+        return arr;
+    }
+
+    in(root) {
+        const arr = [];
+        if(root) {
+            arr.push(root.data);
+            this.in(root.left);
+            this.in(root.right);
+        }
+    }
+
+    preOrder() {
+        return this.pre(this.root);
+    }
+
+    postOrder() {
+        return this.post(this.root);
+    }
+
+    inOrder() {
+        return this.in(this.root);
     }
 }
