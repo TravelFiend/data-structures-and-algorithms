@@ -115,11 +115,10 @@ export class BinarySearchTree {
     }
 
     findMaximumValue(){
-        if(!this.root){
+        let currentNode = this.root;
+        if(currentNode) {
             return;
         }
-        let currentNode = this.root;
-
         while(currentNode.right){
             currentNode = currentNode.right;
         }
