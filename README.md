@@ -4,6 +4,9 @@
 1. arrayShift - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/2
 1. arrayBinarySearch - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/3
 1. mockInterview - N/A
+1. linkedList - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/5
+1. llInsertions - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/6
+1. llKthFromEnd - PR: https://github.com/TravelFiend/data-structures-and-algorithms/pull/8
 
 
 # Reverse an Array
@@ -122,7 +125,7 @@ const binarySearch = (sortedArr, searchKey) => {
 };
 ~~~~
 
-# Array Binary Search
+# Mock Interview
 <!-- Short summary or background information -->
 Fourth code chalenge in career track. Completed by Mike Grace
 
@@ -157,4 +160,185 @@ const arrayCondenser = arr => {
     }
     return newArr;
 };
+~~~~
+
+# Linked List
+<!-- Short summary or background information -->
+Fifth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
+* Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+* Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+* Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+![mock-interview](./assets/mock-interview-whiteboard.jpg)
+~~~~
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    constructor() {
+        this.head = null;
+    }
+
+    insert(val) {
+        const node = new Node(val);
+        node.next = this.head;
+        this.head = node;
+    }
+
+    includes(val) {
+        let current = this.head;
+        while(current !== null) {
+            if(current.value === val) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    toString() {
+        let str = '';
+        let current = this.head;
+        while(current !== null) {
+            str += `${current.value} `;
+            current = current.next;
+        }
+        return str;
+    }
+}
+~~~~
+
+# Linked List Insertions
+<!-- Short summary or background information -->
+Sixth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write the following methods for the Linked List class:
+
+* .append(value) which adds a new node with the given value to the end of the list
+* .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+* .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+~~~~
+append(val) {
+    let current = this.head;
+    const node = new Node(val);
+    while(current.next){
+        current = current.next;
+    }
+    current.next = node;
+}
+
+insertBefore(val, newVal){
+    let current = this.head;
+    const node = new Node(newVal);
+    while(current){
+        if(current.next.value === val){
+            node.next = current.next;
+            current.next = node;
+        }
+        current = current.next;
+    }
+}
+
+insertAfter(val, newVal){
+    let current = this.head;
+    const node = new Node(newVal);
+    while(current) {
+        if(current.value === val) {
+            node.next = current.next;
+            current.next = node;
+        }
+        current = current.next;
+    }
+}
+~~~~
+
+# Linked List Kth From End
+<!-- Short summary or background information -->
+Seventh code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. find full length of linked list
+1. subtract k from full length
+1. after getting the difference, find corresponding linked list node
+1. return that node's value
+
+## Solution
+<!-- Embedded whiteboard image -->
+![ll-kth-from-end](./assets/ll-kth-from-end.jpg)
+~~~~
+kthFromEnd(k) {
+    let current = this.head;
+    let totalNodes = 0;
+    while(current){
+        totalNodes++;
+        current = current.next;
+    }
+    const place = totalNodes - k;
+    let num = 1;
+    current = this.head;
+    while(current){
+        if(num !== place){
+            num++;
+            current = current.next;
+        } else {
+            return current.value;
+        }
+    }
+}
+~~~~
+
+# Linked List merge
+<!-- Short summary or background information -->
+Eigth code chalenge in career track. Completed by Mike Grace
+
+## Challenge
+<!-- Description of the challenge -->
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge I decided to do the following:
+
+1. 
+
+## Solution
+<!-- Embedded whiteboard image -->
+![ll-merge](./assets/ll-merge.jpg)
+~~~~
+
 ~~~~
