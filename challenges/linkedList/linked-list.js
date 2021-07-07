@@ -1,7 +1,7 @@
 class Node {
-    constructor(value){
+    constructor(value, next = null){
         this.value = value;
-        this.next = null;
+        this.next = next;
     }
 }
 
@@ -11,14 +11,13 @@ class LinkedList {
     }
 
     insert(val) {
-        const node = new Node(val);
-        node.next = this.head;
+        const node = new Node(val, this.head);
         this.head = node;
     }
 
     includes(val) {
         let current = this.head;
-        while(current !== null) {
+        while(current) {
             if(current.value === val) {
                 return true;
             }
@@ -30,8 +29,8 @@ class LinkedList {
     toString() {
         let str = '';
         let current = this.head;
-        while(current !== null) {
-            str += `${current.value} `;
+        while(current) {
+            str += `${current.value}, `;
             current = current.next;
         }
         return str;
