@@ -1,21 +1,23 @@
 const LinkedList = require('../linked-list');
 
 describe('Linked List', () => {
+    it('should create an empty linked list', () => {
+        const list = new LinkedList();
+        expect(list).toEqual({ 'head': null });
+    });
+
     describe('insert', () => {
         it('should insert a node at the start of the linked list', () => {
-            const list = new LinkedList();
-            expect(list).toEqual({ 'head': null });
+            
         });
     });
 
     describe('includes', () => {
-        it('should return true if search value is found and false if not', () => {
+        it('should return true if value is found', () => {
 
-        });
-    });
+        }),
 
-    describe('toString', () => {
-        it('should return a string with all node values', () => {
+        it('should return false if value is not found', () => {
 
         });
     });
